@@ -4,7 +4,19 @@ Simple iOS client application for consuming SpaceX API.
 
 ### Dependencies
 
-**No dependencies!** Using only iOS SDK.
+To compile and run the project install the following:
+- **Xcode**
+- **CocoaPods**
+- **YouTubePlayer**
+
+Commands that may be useful:
+```shell
+sudo gem install cocoapods
+git clone https://github.com/adamgic/SpaceX.git
+cd SpaceX/
+pod install
+```
+
 
 ## Description
 
@@ -17,7 +29,7 @@ iOS client application, consuming API from SpaceX available [here](https://api.s
 - **Decodable** protocol to decode JSON
 - **XCTest** for Unit Testing and UI Testing
 - use of **DateFormatter** to get local time and UTC
-- **Foundation** and **swift 4**
+- **Foundation** and **Swift 4**
 
 ### Features
 
@@ -41,6 +53,7 @@ Details view of a launch providing information about
 - local launch time
 - payloads
 - links placed in **UIStackView** dynamically, allowing user to browse the content
+- embedded preview of YouTube video
 
 ![details](doc/details.png)
 

@@ -8,13 +8,14 @@
 
 import UIKit
 import SafariServices
+import YouTubePlayer
 
 class DetailsViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var linksContainer: UIView!
 
+    @IBOutlet weak var videoView: YouTubePlayerView!
     @IBOutlet weak var stackView: UIStackView!
     var model: Launch?
     var image: UIImage?
@@ -61,6 +62,12 @@ class DetailsViewController: UIViewController {
                     button.addTarget(self, action: #selector(buttonTouchUp), for: .touchUpInside)
                     stackView.addArrangedSubview(button)
                 }
+                if let videoLink = links.first(where: {
+                    return $0.name == "video_link" && $0.url.contains("www.youtube.com")
+                }), let url = URL(string: videoLink.url) {
+                    videoView.loadVideoURL(url)
+                }
+
             }
 
         }
