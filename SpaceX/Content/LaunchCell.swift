@@ -15,6 +15,7 @@ class LaunchCell: UITableViewCell {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     @IBOutlet weak var successView: SuccessView!
+    @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
 
     var imageDataTask: URLSessionDataTask?
 
@@ -24,9 +25,14 @@ class LaunchCell: UITableViewCell {
         }
     }
 
+    var imageViewSize: CGSize {
+        return CGSize(width: imageHeightConstraint.constant, height: imageHeightConstraint.constant)
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
 
+        reset()
     }
 
     override func prepareForReuse() {
@@ -45,7 +51,6 @@ class LaunchCell: UITableViewCell {
 
     func configure() {
         guard let model = model, let date = model.utcDateString.split(separator: " ").first else {
-            reset()
             return
         }
 
@@ -57,13 +62,19 @@ class LaunchCell: UITableViewCell {
         if let url = URL(string: model.missionPatch) {
             activityIndicator.startAnimating()
             imageDataTask = URLSession.shared.dataTask(with: url) { [weak self] (data, _, _) in
+                let image: UIImage?
+                if
+                    let data = data,
+                    let imageViewSize = self?.imageViewSize,
+                    let resizedImage = UIImage(data: data)?.resized(toFit: imageViewSize) {
+                    image = resizedImage
+                } else {
+                    image = nil
+                }
+
                 DispatchQueue.main.async {
                     self?.activityIndicator.stopAnimating()
-                    if let data = data {
-                        self?.missionPatchView.image = UIImage(data: data)
-                    } else {
-                        self?.missionPatchView.image = nil
-                    }
+                    self?.missionPatchView.image = image
                 }
             }
 
@@ -71,4 +82,3 @@ class LaunchCell: UITableViewCell {
         }
     }
 }
-

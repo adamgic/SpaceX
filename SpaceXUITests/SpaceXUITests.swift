@@ -19,6 +19,12 @@ class SpaceXUITests: XCTestCase {
     
     func testUseFilterScrollDownGoToDetailsGoBack() {
 
+        // wait for test application to start
+        guard XCUIApplication().switches.firstMatch.waitForExistence(timeout: 60) else {
+            XCTFail()
+            return
+        }
+
         // hide successful lauches filter
         XCUIApplication().switches.firstMatch.tap()
 

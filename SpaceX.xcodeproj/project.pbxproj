@@ -10,6 +10,8 @@
 		0FCFCAEDA9091086B8895A45 /* Pods_SpaceXUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789CBF0914615291B7A06BC2 /* Pods_SpaceXUITests.framework */; };
 		72C931B643FF4376A7DD13F9 /* Pods_SpaceXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2526B2BFA227CA537AFA50 /* Pods_SpaceXTests.framework */; };
 		77123D75183538A2671BD9F3 /* Pods_SpaceX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B6041F5D490571E25358A7 /* Pods_SpaceX.framework */; };
+		B935D6F620545E3A00A5CCE3 /* UIImage+resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B935D6F520545E3A00A5CCE3 /* UIImage+resize.swift */; };
+		B935D6F820545FB300A5CCE3 /* ImageResizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B935D6F720545FB300A5CCE3 /* ImageResizeTests.swift */; };
 		B9722991204F245E005F639D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9722990204F245E005F639D /* AppDelegate.swift */; };
 		B9722993204F245F005F639D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9722992204F245F005F639D /* MainViewController.swift */; };
 		B9722996204F245F005F639D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9722994204F245F005F639D /* Main.storyboard */; };
@@ -55,6 +57,8 @@
 		789CBF0914615291B7A06BC2 /* Pods_SpaceXUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C581533FF6A795B72A671C3 /* Pods-SpaceXUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpaceXUITests/Pods-SpaceXUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AB68D0FD9E586974EE83C775 /* Pods-SpaceX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpaceX/Pods-SpaceX.debug.xcconfig"; sourceTree = "<group>"; };
+		B935D6F520545E3A00A5CCE3 /* UIImage+resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+resize.swift"; sourceTree = "<group>"; };
+		B935D6F720545FB300A5CCE3 /* ImageResizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResizeTests.swift; sourceTree = "<group>"; };
 		B972298D204F245E005F639D /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9722990204F245E005F639D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9722992204F245F005F639D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 				B9722999204F245F005F639D /* LaunchScreen.storyboard */,
 				B9722994204F245F005F639D /* Main.storyboard */,
 				B9722992204F245F005F639D /* MainViewController.swift */,
+				B935D6F520545E3A00A5CCE3 /* UIImage+resize.swift */,
 			);
 			path = SpaceX;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 				B97229A5204F245F005F639D /* SpaceXTests.swift */,
 				B97229A7204F245F005F639D /* Info.plist */,
 				B97229D9204F81E3005F639D /* launches.json */,
+				B935D6F720545FB300A5CCE3 /* ImageResizeTests.swift */,
 			);
 			path = SpaceXTests;
 			sourceTree = "<group>";
@@ -536,6 +542,7 @@
 				B97229D8204F7F0E005F639D /* ButtonWithURL.swift in Sources */,
 				B97229D0204F3793005F639D /* Payload.swift in Sources */,
 				B9722991204F245E005F639D /* AppDelegate.swift in Sources */,
+				B935D6F620545E3A00A5CCE3 /* UIImage+resize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +551,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B97229A6204F245F005F639D /* SpaceXTests.swift in Sources */,
+				B935D6F820545FB300A5CCE3 /* ImageResizeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

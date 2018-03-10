@@ -109,7 +109,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xxG-fb-Cf1">
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xxG-fb-Cf1">
                                             <rect key="frame" x="8" y="44" width="120" height="120"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="120" id="8Dg-68-YaO"/>
@@ -147,6 +147,7 @@
                                 <connections>
                                     <outlet property="activityIndicator" destination="1yP-0K-me0" id="fyg-d9-VGu"/>
                                     <outlet property="dateLabel" destination="OLU-CZ-THD" id="fQm-qJ-4re"/>
+                                    <outlet property="imageHeightConstraint" destination="8Dg-68-YaO" id="rQ7-no-w4s"/>
                                     <outlet property="missionPatchView" destination="xxG-fb-Cf1" id="e3S-jC-4KY"/>
                                     <outlet property="successView" destination="Hgt-yO-E4h" id="vaI-wv-x51"/>
                                     <segue destination="ark-CZ-H5I" kind="show" id="L4a-tU-EVJ"/>
